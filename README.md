@@ -1,16 +1,43 @@
-# multiselect_dropdown
+Search in Pub with# multiselectable_dropdown
 
-A new Flutter project.
+A new Flutter MultiSelectableDropDown package project.
 
-## Getting Started
+Reference From MultiSelect Package
 
-This project is a starting point for a Flutter application.
+![dropdown](https://user-images.githubusercontent.com/39454969/69930166-66f10700-14f0-11ea-932a-9e3255f034a1.gif)
 
-A few resources to get you started if this is your first Flutter project:
+## Example
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```dart
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+class _HomePageState extends State<HomePage> {
+  List<MultipleSelectItem> elements = List.generate(
+    15,
+    (index) => MultipleSelectItem.build(
+      value: index,
+      display: '$index display',
+      content: '$index content',
+    ),
+  );
+
+  List _selectedValues = [];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("MultiSelect DropDown"),
+      ),
+      body: MultipleDropDown(
+        placeholder: 'Hint Text',
+        disabled: false,
+        values: _selectedValues,
+        elements: elements,
+      ),
+    );
+  }
+}
