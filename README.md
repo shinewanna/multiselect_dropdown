@@ -1,7 +1,7 @@
 Search in Pub with 
 ## multiselectable_dropdown
 
-A new Flutter MultiSelectableDropDown package project.
+Multiselect Dropdown package.Clearly you'll know which purpose to use sometime we want to add multiselectable dropdown in our product.This package is the solution for the problem.
 
 Reference From MultiSelect Package
 

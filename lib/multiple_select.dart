@@ -66,7 +66,7 @@ class MultipleSelectRoute<T> extends PopupRoute<T> {
         title: this.title,
       ),
     );
-    ThemeData theme = Theme.of(context, shadowThemeOnly: true);
+    ThemeData theme = Theme.of(context);
     if (theme != null) {
       bottomSheet = new Theme(data: theme, child: bottomSheet);
     }
